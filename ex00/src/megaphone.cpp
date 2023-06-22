@@ -16,6 +16,7 @@ int main(int argc, char **argv)
 {
 	int			i = 1;
 	int			j;
+	int			len;
 	std::string	str;
 
 	if (argc <= 1)
@@ -26,7 +27,8 @@ int main(int argc, char **argv)
 		{
 			str = argv[i];
 			j = 0;
-			while (j < str.length())
+			len = str.length();
+			while (j < len)
 			{
         		str[j] = std::toupper(str[j]);
         		j++;
