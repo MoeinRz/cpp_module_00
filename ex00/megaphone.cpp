@@ -14,70 +14,28 @@
 
 int main(int argc, char **argv)
 {
+	int			i = 1;
+	int			j;
+	std::string	str;
+
 	if (argc <= 1)
-		std::cout << "No argument provided." << std::endl;
+		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
 	else
 	{
-		std::cout << "You entered: " << argv[1] << std::endl;
+		while (i < argc)
+		{
+			str = argv[i];
+			j = 0;
+			while (j < str.length())
+			{
+        		str[j] = std::toupper(str[j]);
+        		j++;
+			}
+			std::cout << str;
+			std::cout << " ";
+			i++;
+    	}
+		std::cout << std::endl;
 	}
 	return (0);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// #include <iostream>
-// #include <cctype>
-// #include <string>
-
-// int	main(int argc, char **argv) {
-
-
-// 	if (argc == 1)
-// 	{
-// 		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
-// 		return 0;
-// 	}
-
-// 	std::string	arg;
-// 	std::string::const_iterator it;
-	
-// 	int	i = 1;
-// 	while (argv[i] != NULL)
-// 	{
-// 		arg = argv[i];
-// 		for (it = arg.begin() ; it != arg.end() ; ++it) {
-// 			std::cout << (char) std::toupper((int) *it);
-// 		}
-// 		i++;
-// 	}
-// 	std::cout << std::endl;
-
-// 	return 0;
-// }
