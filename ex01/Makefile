@@ -1,20 +1,25 @@
 # **************************************************************************** #
 #                                                                              #
-#                                                                              #
-#    Makefile                                                                  #
-#                                                                              #
-#    By: moeinrz <moeinrezaei330@gmail.com>                                    #
-#                                                                              #
-#    Created: 2023/06/11 10:46:04 by moeinrz                                   #
-#    Updated: 2023/06/22 17:18:16 by moeinrz                                   #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: mrezaei <mrezaei@student.42.fr>            +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2023/06/11 10:46:04 by moeinrz           #+#    #+#              #
+#    Updated: 2023/09/04 18:37:25 by mrezaei          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC 			=	c++
+
 CFLAGS 		=	-Wall -Wextra -Werror 
+
 OPTION 		=	-std=c++98
+
 NAME 		=	phonebook
+
 SRC			=	$(shell find ./src -name "*.cpp" -type f)
+
 OBJECTS		=	$(SRC:.cpp=.o)
 
 Y	= "\033[33m"

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                                            */
-/*   megaphone.cpp                                                            */
-/*                                                                            */
-/*   By: moeinrz <moeinrezaei330@gmail.com>                                   */
-/*                                                                            */
-/*   Created: 2023/06/22 19:49:38 by moeinrz                                  */
-/*   Updated: 2023/12/22 20:02:09 by moeinrz                                  */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mrezaei <mrezaei@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/06/22 19:49:38 by moeinrz           #+#    #+#             */
+/*   Updated: 2023/07/30 18:21:29 by mrezaei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int main(void)
 	std::string	input;
 
 	std::cout << "Enter your selection:\nADD, SEARCH, EXIT" << std::endl;
-    std::cin >> input;
+	std::cin >> input;
 	if (input.compare("ADD") == 0)
 		std::cout << "Your selection is ADD" << std::endl;
 	else if (input.compare("EXIT") == 0)
