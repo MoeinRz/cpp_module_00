@@ -6,7 +6,7 @@
 /*   By: mrezaei <mrezaei@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 15:02:03 by mrezaei           #+#    #+#             */
-/*   Updated: 2023/09/07 12:41:41 by mrezaei          ###   ########.fr       */
+/*   Updated: 2023/09/07 14:57:33 by mrezaei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,38 +22,19 @@ Contact::~Contact(void)
     return ;
 }
 
-void    Contact::setFirstName()
+void    Contact::setContact()
 {
     std::cout << "Enter your first name: ";
     std::cin >> this->_firstName;
-    return ;
-}
-
-void    Contact::setLastName()
-{
     std::cout << "Enter your last name: ";
     std::cin >> this->_lastName;
-    return ;
-}
-
-void    Contact::setNickName()
-{
     std::cout << "Enter your nickname: ";
     std::cin >> this->_nickname;
-    return ;
-}
-
-void    Contact::setPhoneNumber()
-{
     std::cout << "Enter your phone number: ";
     std::cin >> this->_phoneNumber;
-    return ;
-}
-
-void    Contact::setDarkestSecret()
-{
     std::cout << "Enter your darkest secret: ";
     std::cin >> this->_darkestSecret;
+    std::cin.ignore(); 
     std::cout << "Your contact saved." << std::endl;
     return ;
 }
