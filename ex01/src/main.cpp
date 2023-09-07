@@ -6,11 +6,27 @@
 /*   By: mrezaei <mrezaei@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/22 19:49:38 by moeinrz           #+#    #+#             */
-/*   Updated: 2023/09/07 14:59:35 by mrezaei          ###   ########.fr       */
+/*   Updated: 2023/09/07 17:24:57 by mrezaei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/phonebook.hpp"
+
+std::string transformString(const std::string& input)
+{
+    std::string result;
+
+    if (input.length() == 10)
+		result = input;
+	else if (input.length() < 10)
+        result = std::string(10 - input.length(), ' ') + input;
+	else
+	{
+        result = input.substr(0, 9);
+        result += '.';
+    }
+    return result;
+}
 
 int main(void)
 {
@@ -49,13 +65,24 @@ int main(void)
 			std::cout << "Pleas enter index of contact:" << std::endl;
 			std::cin >> index;
 			std::cin.ignore(); 
-			if (index >= 0 && index < 8)
+			if (index > 0 && index < 9)
+				index--;
+			else
 			{
-				contact[index].getFirstName();
-				contact[index].getLastName();
-				contact[index].getNickName();
-				contact[index].getPhoneNumber();
-				contact[index].getDarkestSecret();
+				std::cout << "Your index is wrong" << std::endl;
+				continue;
+			}
+			if (index + 1 > 0 && index + 1 < 8)
+			{
+				std::cout << "|-------------------------------------------|" << std::endl;
+				std::cout << "|     Index|First Name| Last Name|  Nickname|" << std::endl;
+				std::cout << "|----------|----------|----------|----------|" << std::endl;
+				std::cout << "|         " << index + 1;
+				std::cout << "|";
+				std::cout << transformString(contact[index].getFirstName()) << "|";
+				std::cout << transformString(contact[index].getLastName()) << "|";
+				std::cout << transformString(contact[index].getNickName()) << "|" << std::endl;
+			    std::cout << "|-------------------------------------------|" << std::endl;
 			}
 			else
 			{
