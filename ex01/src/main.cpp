@@ -6,7 +6,7 @@
 /*   By: mrezaei <mrezaei@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/22 19:49:38 by moeinrz           #+#    #+#             */
-/*   Updated: 2023/09/07 17:24:57 by mrezaei          ###   ########.fr       */
+/*   Updated: 2023/09/08 14:36:52 by mrezaei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,9 @@ std::string transformString(const std::string& input)
 int main(void)
 {
 	std::string	input;
-	Contact		contact[8];
-	int  		index = 0;
+	Contact		contact[10];
+	int  		index = 1;
+	int			display_index;
 
 	while (input != "EXIT")
 	{
@@ -43,15 +44,15 @@ int main(void)
 			std::cout << "Wrong input." << std::endl;	
 		else if (input == "ADD")
 		{
-			if (index < 8)
+			if (index <= 9 && index > 0)
             {
                 contact[index].setContact();
-                index++;
+				index++;
             }
-			else
+			else if (index > 9)
             {
                 std::cout << "Contact list is full I have to replace the first contact." << std::endl;
-				index = 0;
+				index = 1;
 				contact[index].setContact();
 				index++;
 			}
@@ -63,25 +64,18 @@ int main(void)
 		else if (input == "SEARCH")
 		{
 			std::cout << "Pleas enter index of contact:" << std::endl;
-			std::cin >> index;
+			std::cin >> display_index;
 			std::cin.ignore(); 
-			if (index > 0 && index < 9)
-				index--;
-			else
-			{
-				std::cout << "Your index is wrong" << std::endl;
-				continue;
-			}
-			if (index + 1 > 0 && index + 1 < 8)
+			if (display_index > 0 && display_index <= 9)
 			{
 				std::cout << "|-------------------------------------------|" << std::endl;
 				std::cout << "|     Index|First Name| Last Name|  Nickname|" << std::endl;
 				std::cout << "|----------|----------|----------|----------|" << std::endl;
-				std::cout << "|         " << index + 1;
+				std::cout << "|         " << display_index;
 				std::cout << "|";
-				std::cout << transformString(contact[index].getFirstName()) << "|";
-				std::cout << transformString(contact[index].getLastName()) << "|";
-				std::cout << transformString(contact[index].getNickName()) << "|" << std::endl;
+				std::cout << transformString(contact[display_index].getFirstName()) << "|";
+				std::cout << transformString(contact[display_index].getLastName()) << "|";
+				std::cout << transformString(contact[display_index].getNickName()) << "|" << std::endl;
 			    std::cout << "|-------------------------------------------|" << std::endl;
 			}
 			else

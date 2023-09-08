@@ -6,7 +6,7 @@
 /*   By: mrezaei <mrezaei@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/22 19:49:38 by moeinrz           #+#    #+#             */
-/*   Updated: 2023/09/07 14:46:34 by mrezaei          ###   ########.fr       */
+/*   Updated: 2023/09/08 14:50:53 by mrezaei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,13 +30,13 @@ public:
     Contact(void);
     ~Contact(void);
     
-    Contact(
-    std::string firstName,
-    std::string lastName,
-    std::string nickName,
-    std::string phoneNumber,
-    std::string darkestSecret
-    );
+    // Contact(
+    // std::string firstName,
+    // std::string lastName,
+    // std::string nickName,
+    // std::string phoneNumber,
+    // std::string darkestSecret
+    // );
     void setContact();
 
     std::string getFirstName();
@@ -45,5 +45,10 @@ public:
     std::string getPhoneNumber();
     std::string getDarkestSecret();
 };
+
+class PhoneBook
+{
+    private:
+        
 
 #endif
