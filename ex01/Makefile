@@ -6,7 +6,7 @@
 #    By: mrezaei <mrezaei@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/11 10:46:04 by moeinrz           #+#    #+#              #
-#    Updated: 2023/09/07 11:32:41 by mrezaei          ###   ########.fr        #
+#    Updated: 2023/09/11 12:35:41 by mrezaei          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,10 @@ CC 			=	c++
 CFLAGS 		=	-Wall -Wextra -Werror 
 OPTION 		=	-std=c++98
 NAME 		=	phonebook
-SRC			=	$(shell find ./src -name "*.cpp" -type f)
+SRC			=	$(shell find ./src -name "phonebook.cpp" \
+					-o -name "contact.cpp" \
+					-o -name "main.cpp" -type f)
+
 OBJECTS		=	$(SRC:.cpp=.o)
 
 Y	= "\033[33m"
