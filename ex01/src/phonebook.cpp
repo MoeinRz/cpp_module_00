@@ -6,7 +6,7 @@
 /*   By: mrezaei <mrezaei@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 15:02:03 by mrezaei           #+#    #+#             */
-/*   Updated: 2023/09/07 16:48:40 by mrezaei          ###   ########.fr       */
+/*   Updated: 2023/09/11 09:59:57 by mrezaei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,31 +41,25 @@ void    Contact::setContact()
 
 std::string Contact::getFirstName()
 {
-    // std::cout << "|" << this->_firstName << std::endl;
     return this->_firstName;
 }
 
 std::string Contact::getLastName()
 {
-    // std::cout << "|" << this->_lastName << std::endl;
     return this->_lastName;
 }
 
 std::string Contact::getNickName()
 {
-    // std::cout << "|" << this->_nickname << std::endl;
     return this->_nickname;
 }
 
 std::string Contact::getPhoneNumber()
 {
-    // std::cout << "Phone number: " << this->_phoneNumber << std::endl;
     return this->_phoneNumber;
 }
 
 std::string Contact::getDarkestSecret()
 {
-    // std::cout << "Darkest secret: " << this->_darkestSecret << std::endl;
-    // std::cout << "|-------------------------------------------|" << std::endl;
-    return this->_darkestSecret;
+   return this->_darkestSecret;
 }
