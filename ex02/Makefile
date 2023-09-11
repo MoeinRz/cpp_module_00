@@ -1,20 +1,21 @@
 # **************************************************************************** #
 #                                                                              #
-#                                                                              #
-#    Makefile                                                                  #
-#                                                                              #
-#    By: moeinrz <moeinrezaei330@gmail.com>                                    #
-#                                                                              #
-#    Created: 2023/06/11 10:46:04 by moeinrz                                   #
-#    Updated: 2023/06/22 17:18:16 by moeinrz                                   #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: mrezaei <mrezaei@student.42.fr>            +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2023/06/11 10:46:04 by moeinrz           #+#    #+#              #
+#    Updated: 2023/09/11 14:02:45 by mrezaei          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC 			=	c++
 CFLAGS 		=	-Wall -Wextra -Werror 
 OPTION 		=	-std=c++98
-NAME 		=	phonebook
-SRC			=	$(shell find ./src -name "*.cpp" -type f)
+NAME 		=	Account
+INCLUDES	=	./include
+SRC			=	$(shell find ./src -name "tests.cpp" -o -name "Account.cpp" -type f)
 OBJECTS		=	$(SRC:.cpp=.o)
 
 Y	= "\033[33m"
@@ -37,7 +38,7 @@ $(NAME) : $(OBJECTS)
 
 $(OBJECTS) : %.o : %.cpp
 	@echo $(Y)Compiling [$<]...
-	$(CC) $(CFLAGS) -c $< -o $@ $(OPTION)
+	$(CC) $(CFLAGS) -I $(INCLUDES) -c $< -o $@ $(OPTION)
 	@echo $(Y)==================================$(X)
 	@echo $(Y)Finish Compiling [$<]$(X)
 	@echo $(Y)==================================$(X)
