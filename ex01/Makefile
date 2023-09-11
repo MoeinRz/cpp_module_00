@@ -6,7 +6,7 @@
 #    By: mrezaei <mrezaei@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/11 10:46:04 by moeinrz           #+#    #+#              #
-#    Updated: 2023/09/11 12:35:41 by mrezaei          ###   ########.fr        #
+#    Updated: 2023/09/11 13:52:28 by mrezaei          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,6 +14,7 @@ CC 			=	c++
 CFLAGS 		=	-Wall -Wextra -Werror 
 OPTION 		=	-std=c++98
 NAME 		=	phonebook
+INCLUDES	=	./include
 SRC			=	$(shell find ./src -name "phonebook.cpp" \
 					-o -name "contact.cpp" \
 					-o -name "main.cpp" -type f)
@@ -40,7 +41,7 @@ $(NAME) : $(OBJECTS)
 
 $(OBJECTS) : %.o : %.cpp
 	@echo $(Y)Compiling [$<]...
-	$(CC) $(CFLAGS) -c $< -o $@ $(OPTION)
+	$(CC) $(CFLAGS) -I $(INCLUDES) -c $< -o $@ $(OPTION)
 	@echo $(Y)==================================$(X)
 	@echo $(Y)Finish Compiling [$<]$(X)
 	@echo $(Y)==================================$(X)
