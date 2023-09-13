@@ -6,7 +6,7 @@
 /*   By: mrezaei <mrezaei@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 15:02:03 by mrezaei           #+#    #+#             */
-/*   Updated: 2023/09/13 14:22:59 by mrezaei          ###   ########.fr       */
+/*   Updated: 2023/09/13 14:26:28 by mrezaei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,22 +105,4 @@ void PhoneBook::searchContact()
 		}
 	else
 		std::cout << "Invalid input. Please enter a valid integer." << std::endl;
-
-	
-	// if (display_index > 0 && display_index <= 9)
-	// {
-	// 	std::cout << "|-------------------------------------------|" << std::endl;
-	// 	std::cout << "|     Index|First Name| Last Name|  Nickname|" << std::endl;
-	// 	std::cout << "|----------|----------|----------|----------|" << std::endl;
-	// 	std::cout << "|         " << display_index;
-	// 	std::cout << "|";
-	// 	std::cout << transformString(_contact[display_index].getFirstName()) << "|";
-	// 	std::cout << transformString(_contact[display_index].getLastName()) << "|";
-	// 	std::cout << transformString(_contact[display_index].getNickName()) << "|" << std::endl;
-	// 	std::cout << "|-------------------------------------------|" << std::endl;
-	// }
-	// else
-	// {
-	// 	std::cout << "Your index is wrong" << std::endl;
-	// }
 }
