@@ -6,7 +6,7 @@
 /*   By: mrezaei <mrezaei@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/22 19:49:38 by mrezaei           #+#    #+#             */
-/*   Updated: 2023/09/11 14:51:13 by mrezaei          ###   ########.fr       */
+/*   Updated: 2023/09/13 12:33:15 by mrezaei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,13 @@
 #include <iomanip>
 #include <iostream>
 
-int Account::_nbAccounts;
-int Account::_totalAmount;
-int Account::_totalNbDeposits;
-int Account::_totalNbWithdrawals;
+int Account::_nbAccounts = 0;
+int Account::_totalAmount = 0;
+int Account::_totalNbDeposits = 0;
+int Account::_totalNbWithdrawals = 0;
 
 Account::Account(int initial_deposit)
 {
-	Account::_nbAccounts = 0;
-	Account::_totalAmount = 0;
-	Account::_totalNbDeposits = 0;
-	Account::_totalNbWithdrawals = 0;
 	_accountIndex = _nbAccounts++;
 	_amount = initial_deposit;
 	_nbDeposits = 0;
@@ -110,7 +106,7 @@ bool Account::makeWithdrawal(int withdrawal)
     _totalNbWithdrawals++;
     _amount -= withdrawal;
     _totalAmount -= withdrawal;
-    std::cout << withdrawal << ";amount:" << checkAmount() - withdrawal
+    std::cout << withdrawal << ";amount:" << checkAmount()
               << ";nb_withdrawals:" << _nbWithdrawals << std::endl;
     return true;
 }
