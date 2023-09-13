@@ -6,7 +6,7 @@
 /*   By: mrezaei <mrezaei@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/22 19:49:38 by mrezaei           #+#    #+#             */
-/*   Updated: 2023/09/11 12:38:51 by mrezaei          ###   ########.fr       */
+/*   Updated: 2023/09/13 14:20:23 by mrezaei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,13 +46,14 @@ class PhoneBook
 private:
     Contact _contact[10];
     int     _index;
+    int     _isall;
 
 public:
     PhoneBook();
     ~PhoneBook();
     std::string transformString(const std::string& input);
     void addContact();
-    void searchContact(int display_index);
+    void searchContact(void);
     
 };
 
